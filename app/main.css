@@ -6,26 +6,36 @@
     color: #000;
     padding: 0.2em 0;
 }
-
 body {
     padding: 0;
+    font-size: 16px;
 }
-
 
 /*Font family */
 
 * {
     font-family: 'Open Sans', sans-serif;
 }
-
 h1,
 h2,
 h3,
 h4 {
     font-family: 'Inconsolata', monospace;
+    line-height: 1.5;
 }
 
+p {
+    margin-bottom: 30px;
+}
 
+a {
+    color: #512da8;
+}
+
+a:hover, a:focus {
+    color: #512da8;
+    text-decoration: underline;
+}
 /*replacing bootstrap primary color */
 
 .btn-primary {

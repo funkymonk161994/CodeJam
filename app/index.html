@@ -24,6 +24,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -57,9 +58,9 @@
                 </div>
                 <div id="navbar3" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#/">Home</a></li>
-                        <li><a ng-href="#/problems">Problems</a></li>
-                        <li><a ng-href="#/contact">Contact</a></li>
+                        <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+                        <li><a ui-sref="problems" ui-sref-active="active">Problems</a></li>
+                        <li><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -69,17 +70,18 @@
         </header>
         <!-- /header -->
 
+        <!-- MAIN CONTENT -->
         <div class="container">
-            <div ng-view=""></div>
+            <ui-view></ui-view>
         </div>
 
         <footer class="footer">
             <div class="container-fluid">
-                <center><p>With <span class="glyphicon glyphicon-heart"></span> from Victor Vargas and Mohit Patel</p></center>
+                <center><p>With <span class="glyphicon glyphicon-heart"></span> from Victor Vargas and Mohitosh Mondal</p></center>
             </div>
         </footer>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
         <script>
         ! function(A, n, g, u, l, a, r) {
             A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
@@ -90,7 +92,7 @@
 
         ga('create', 'UA-XXXXX-X');
         ga('send', 'pageview');
-        </script>
+        </script>-->
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -102,6 +104,7 @@
         <script src="bower_components/angular-route/angular-route.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -111,6 +114,13 @@
         <script src="/problems/problems.js"></script>
         <script src="/problems/problem1/problem1.js"></script>
         <!-- endbuild -->
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+              });
+            });
+        </script>
 </body>
 
 </html>

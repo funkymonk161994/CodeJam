@@ -14,7 +14,6 @@ angular.module('codeJamApp')
         $scope.problemData = {
             "id": 1,
             "description": "Given a row of students where each student has some amount of money. Return the position of two students who have combined sum as specified target amount.",
-            "details": "Assume the data structure as array of student where (index + 1) represent the position of student in the row and the value stored at the index is the amount money that student has.",
             "solutions": [{
                 "description": "Loop through each element x and find if there is another value that equals to target - x.",
                 "correct": true
@@ -23,8 +22,8 @@ angular.module('codeJamApp')
                 "correct": false
             }],
             "hints": [
-                "0 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-                "1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+                "Assume the data structure as array of student where (index + 1) represent the position of student in the row and the value stored at the index is the amount money that student has.",
+                "Think of every index and its amount as a data structure cell and try mapping it in a structure where it is easier to access."
             ]
         };
 
